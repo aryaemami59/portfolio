@@ -5,10 +5,11 @@ import ProjectWrapper from "./ProjectWrapper";
 const Projects: FC = () => (
   <>
     {projects.map(project => (
-      <ProjectWrapper
-        key={project.id}
-        {...project}
-      />
+      <div
+        className="row"
+        key={project.id}>
+        <ProjectWrapper {...project} />
+      </div>
     ))}
   </>
 );

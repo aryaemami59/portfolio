@@ -1,13 +1,6 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Link,
-  Typography,
-} from "@mui/material";
 import { FC, memo } from "react";
-import StyledButton from "./StyledButton";
+import ProjectImage from "./ProjectImage";
+import ProjectText from "./ProjectText";
 
 type Props = {
   name: string;
@@ -18,49 +11,42 @@ type Props = {
   live: string;
 };
 
-const ProjectWrapper: FC<Props> = ({
-  name,
-  id,
-  description,
-  screenshot,
-  github,
-  live,
-}) => {
-  const image = `/assets/screenshots/${screenshot}`;
-  return (
-    <Card raised>
-      <CardMedia
-        component="img"
-        alt={name}
-        image={image}
-      />
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div">
-          {name}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="text.secondary">
-          {description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <StyledButton
-          LinkComponent={Link}
-          href={live}>
-          See Live
-        </StyledButton>
-        <StyledButton
-          href={github}
-          LinkComponent={Link}>
-          Source Code
-        </StyledButton>
-      </CardActions>
-    </Card>
-  );
-};
+const ProjectWrapper: FC<Props> = props => (
+  <>
+    <div className="col-sm-12 col-lg-4">
+      <ProjectText {...props} />
+    </div>
+    <div className="col-sm-12 col-lg-8">
+      <ProjectImage {...props} />
+    </div>
+  </>
+  // <Card raised>
+  //   <CardContent>
+  //     <Typography
+  //       gutterBottom
+  //       variant="h5"
+  //       component="div">
+  //       {name}
+  //     </Typography>
+  //     <Typography
+  //       variant="body2"
+  //       color="text.secondary">
+  //       {description}
+  //     </Typography>
+  //   </CardContent>
+  //   <CardActions>
+  //     <StyledButton
+  //       href={live}
+  //       LinkComponent={forwardButtonLink}>
+  //       See Live
+  //     </StyledButton>
+  //     <StyledButton
+  //       href={github}
+  //       LinkComponent={forwardButtonLink}>
+  //       Source Code
+  //     </StyledButton>
+  //   </CardActions>
+  // </Card>
+);
 
 export default memo<Props>(ProjectWrapper);

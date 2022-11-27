@@ -6,7 +6,6 @@ type Props = ButtonProps;
 
 const StyledButton: FC<Props> = props => (
   <Button
-    // LinkComponent="a"
     {...props}
     className="button-slide"
   />

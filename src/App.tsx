@@ -28,8 +28,15 @@ const App: FC = () => (
     </CustomReveal>
     <CustomReveal>
       <section>
-        <Container maxWidth="sm">
+        <Container>
+          <h1 className="text-center">PROJECTS</h1>
           <Projects />
+          {/* <div className="row">
+            <div className="col-sm-12">
+              <Projects />
+            </div>
+            <div className="col-sm-12"><ProjectImage /></div>
+          </div> */}
         </Container>
       </section>
     </CustomReveal>

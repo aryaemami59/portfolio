@@ -5,7 +5,17 @@
     "github": "https://github.com/aryaemami59/simplyrxsupplies",
     "live": "https://simplyrxsupplies.netlify.app",
     "description": "Simply RX Supplies is a web application that serves as a tool to help make ordering pharmacy supplies easier.",
-    "screenshot": "simplyrxsupplies-netlify-app.png"
+    "screenshot": "simplyrxsupplies-netlify-app.png",
+    "techStack": [
+      "React",
+      "Typescript",
+      "Redux",
+      "Bootstrap",
+      "Github-Pages",
+      "Axios",
+      "Material-UI",
+      "Redux-Toolkit"
+    ]
   },
   {
     "id": 1,
@@ -13,14 +23,28 @@
     "github": "https://github.com/aryaemami59/simply-rx-supplies-mobile-app",
     "live": "",
     "description": "Simply RX Supplies is a mobile app that serves as a tool to help make ordering pharmacy supplies easier.",
-    "screenshot": "simplyrxsupplies-mobile-app.png"
+    "screenshot": "simplyrxsupplies-mobile-app.png",
+    "techStack": [
+      "React-Native",
+      "Typescript",
+      "Redux",
+      "Bootstrap",
+      "Github-Pages",
+      "Axios",
+      "Expo",
+      "React-Navigation",
+      "React-Native-Elements",
+      "React-Native-QRCode-Svg",
+      "Redux-Toolkit"
+    ]
   },
   {
     "id": 2,
     "name": "Sou's Art Gallery",
-    "github": "https://github.com/aryaemami59/sou-hashemi-art-gallery",
-    "live": "",
-    "description": "Sou's Art Gallery Website",
-    "screenshot": "sou-hashemi-website.png"
+    "github": "https://github.com/aryaemami59/sou-hashemi-art-gallery-react",
+    "live": "https://aryaemami59.github.io/sou-hashemi-art-gallery-react",
+    "description": "This website is a love letter to the best mother in the world.",
+    "screenshot": "sou-hashemi-website.png",
+    "techStack": ["React", "Typescript", "Bootstrap", "Github-Pages"]
   }
 ]
