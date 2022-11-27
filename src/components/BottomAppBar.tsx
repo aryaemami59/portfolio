@@ -8,6 +8,8 @@ type Props = AppBarProps;
 const BottomAppBar: FC<Props> = props => (
   <AppBar
     sx={sx}
+    position="static"
+    className="mt-3"
     {...props}
   />
 );

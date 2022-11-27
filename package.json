@@ -20,7 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.10.9",
     "@mui/lab": "^5.0.0-alpha.107",
-    "@mui/material": "^5.10.13",
+    "@mui/material": "^5.10.15",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
     "bootstrap-social": "^5.1.1",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "^5.42.1",

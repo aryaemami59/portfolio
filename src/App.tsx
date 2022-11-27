@@ -4,6 +4,7 @@ import "./App.css";
 import CustomReveal from "./components/CustomReveal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Projects from "./components/Projects";
 import StyledButton from "./components/StyledButton";
 import anchors from "./data/anchors.json";
 
@@ -11,17 +12,26 @@ const App: FC = () => (
   <div className="App">
     <Header />
     <CustomReveal>
-      <Container maxWidth="sm">
-        <h1>
-          Hi my name is <span className="text-main-color">Arya.</span>
-        </h1>
-        <h1>I am a full stack developer. </h1>
-        <ButtonGroup>
-          {anchors.map(anchor => (
-            <StyledButton key={anchor.id}>{anchor.title}</StyledButton>
-          ))}
-        </ButtonGroup>
-      </Container>
+      <section>
+        <Container maxWidth="sm">
+          <h1 className="text-center">
+            <span className="text-main-color">Arya Emami</span>
+          </h1>
+          <h1 className="text-center">Full Stack Developer</h1>
+          <ButtonGroup className=" w-100 justify-content-center">
+            {anchors.map(anchor => (
+              <StyledButton key={anchor.id}>{anchor.title}</StyledButton>
+            ))}
+          </ButtonGroup>
+        </Container>
+      </section>
+    </CustomReveal>
+    <CustomReveal>
+      <section>
+        <Container maxWidth="sm">
+          <Projects />
+        </Container>
+      </section>
     </CustomReveal>
     <Footer />
   </div>
