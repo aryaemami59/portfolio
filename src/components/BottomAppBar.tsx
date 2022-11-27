@@ -1,5 +1,7 @@
-import { AppBar, AppBarProps, SxProps, Theme } from "@mui/material";
-import { FC, memo } from "react";
+import type { AppBarProps, SxProps, Theme } from "@mui/material";
+import { AppBar } from "@mui/material";
+import type { FC } from "react";
+import { memo } from "react";
 
 const sx: SxProps<Theme> = { top: "auto", bottom: 0 };
 

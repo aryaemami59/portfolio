@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "npm run dev",
-    "lint": "eslint --ext .tsx,.ts .",
+    "lint": "eslint --ext .tsx,.ts,.js .",
+    "format": "eslint --fix --ext .tsx,.ts,.js .",
     "preview": "vite preview"
   },
   "dependencies": {

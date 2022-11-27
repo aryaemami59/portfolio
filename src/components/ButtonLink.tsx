@@ -1,5 +1,6 @@
 import { Link } from "@mui/material";
-import { forwardRef, ForwardRefRenderFunction, memo, ReactNode } from "react";
+import type { ForwardRefRenderFunction, ReactNode } from "react";
+import { forwardRef, memo } from "react";
 
 type Props = {
   href: string;

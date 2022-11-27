@@ -1,5 +1,6 @@
 import { MDBIcon } from "mdb-react-ui-kit";
-import { FC, memo } from "react";
+import type { FC } from "react";
+import { memo } from "react";
 import WrapperLink from "./WrapperLink";
 
 type Props = {

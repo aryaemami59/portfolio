@@ -5,10 +5,13 @@ import {
   CardHeader,
   Typography,
 } from "@mui/material";
-import { FC, memo, useMemo } from "react";
+import type { FC } from "react";
+import { memo, useMemo } from "react";
 import ButtonLink from "./ButtonLink";
 import ProjectTextSubHeader from "./ProjectTextSubHeader";
 import StyledButton from "./StyledButton";
+
+const titleTypographyProps = { className: "mb-3" };
 
 type Props = {
   name: string;
@@ -35,20 +38,15 @@ const ProjectText: FC<Props> = ({
   );
 
   return (
-    <Card raised>
+    <Card
+      raised
+      className="h-100 d-flex flex-row flex-wrap">
       <CardHeader
-        className="w-auto"
+        titleTypographyProps={titleTypographyProps}
         title={name}
         subheader={subheader}
-        // subheaderTypographyProps={{ component: "div" }}
       />
       <CardContent>
-        {/* <Typography
-        gutterBottom
-        variant="h5"
-        component="div">
-        {name}
-      </Typography> */}
         <Typography
           variant="body2"
           color="text.secondary">

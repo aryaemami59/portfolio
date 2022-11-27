@@ -1,4 +1,5 @@
-import { FC, memo, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
+import { memo } from "react";
 
 type Props = {
   href: string;

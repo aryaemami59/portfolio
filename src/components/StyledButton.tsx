@@ -1,11 +1,14 @@
-import { Button, ButtonProps } from "@mui/material";
+import type { ButtonProps } from "@mui/material";
+import { Button } from "@mui/material";
 import "aos/dist/aos.css";
-import { FC, memo } from "react";
+import type { FC } from "react";
+import { memo } from "react";
 
 type Props = ButtonProps;
 
 const StyledButton: FC<Props> = props => (
   <Button
+    size="large"
     {...props}
     className="button-slide"
   />

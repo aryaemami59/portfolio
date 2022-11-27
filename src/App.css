@@ -31,5 +31,7 @@ a.custom-link {
 }
 
 img.custom-image {
-  object-fit: contain;
+  /* object-fit: fill; */
+  /* height: 700px; */
+  /* width: auto; */
 }

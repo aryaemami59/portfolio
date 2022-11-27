@@ -1,5 +1,6 @@
 import { Grid, Toolbar } from "@mui/material";
-import { FC, memo } from "react";
+import type { FC } from "react";
+import { memo } from "react";
 import links from "../data/links.json";
 import type { Links } from "../types/links";
 import BottomAppBar from "./BottomAppBar";

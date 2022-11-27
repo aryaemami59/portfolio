@@ -1,5 +1,6 @@
 import { Card, CardMedia } from "@mui/material";
-import { FC, memo } from "react";
+import type { FC } from "react";
+import { memo } from "react";
 
 type Props = {
   name: string;

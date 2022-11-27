@@ -1,24 +1,26 @@
-import { FC, memo, ReactNode } from "react";
-import Reveal, { Fade, FadeProps, RevealProps } from "react-awesome-reveal";
+import type { FC, ReactNode } from "react";
+import { memo } from "react";
+import type { FadeProps, SlideProps } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 type Props = {
-  revealProps?: RevealProps;
+  slideProps?: SlideProps;
   fadeProps?: FadeProps;
   children: ReactNode;
 };
 
-const CustomReveal: FC<Props> = ({ children, fadeProps, revealProps }) => (
-  <Reveal
-    {...revealProps}
-    duration={500}
-    triggerOnce>
+const CustomReveal: FC<Props> = ({ children, fadeProps, slideProps }) => (
+  <Slide
+    direction="left"
+    triggerOnce
+    {...slideProps}>
     <Fade
-      {...fadeProps}
-      delay={400}
-      triggerOnce>
+      delay={700}
+      triggerOnce
+      {...fadeProps}>
       {children}
     </Fade>
-  </Reveal>
+  </Slide>
 );
 
 export default memo<Props>(CustomReveal);
