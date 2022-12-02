@@ -1,21 +1,14 @@
 import type { FC } from "react";
 import { memo } from "react";
 import type { SlideProps } from "react-awesome-reveal";
+import type { ProjectProps } from "../types/projects";
 import CustomReveal from "./CustomReveal";
 import ProjectImage from "./ProjectImage";
 import ProjectText from "./ProjectText";
 
 const projectImageSlideProps: SlideProps = { direction: "right" };
 
-type Props = {
-  name: string;
-  id: number;
-  description: string;
-  screenshot: string;
-  github: string;
-  live: string;
-  techStack: string[];
-};
+type Props = ProjectProps;
 
 const ProjectWrapper: FC<Props> = props => (
   <>
@@ -30,33 +23,6 @@ const ProjectWrapper: FC<Props> = props => (
       </CustomReveal>
     </div>
   </>
-  // <Card raised>
-  //   <CardContent>
-  //     <Typography
-  //       gutterBottom
-  //       variant="h5"
-  //       component="div">
-  //       {name}
-  //     </Typography>
-  //     <Typography
-  //       variant="body2"
-  //       color="text.secondary">
-  //       {description}
-  //     </Typography>
-  //   </CardContent>
-  //   <CardActions>
-  //     <StyledButton
-  //       href={live}
-  //       LinkComponent={forwardButtonLink}>
-  //       See Live
-  //     </StyledButton>
-  //     <StyledButton
-  //       href={github}
-  //       LinkComponent={forwardButtonLink}>
-  //       Source Code
-  //     </StyledButton>
-  //   </CardActions>
-  // </Card>
 );
 
 export default memo<Props>(ProjectWrapper);

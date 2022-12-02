@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import type { FC } from "react";
 import { memo, useMemo } from "react";
-import ButtonLink from "./ButtonLink";
+import ForwardButtonLink from "./ForwardButtonLink";
 import ProjectTextSubHeader from "./ProjectTextSubHeader";
 import StyledButton from "./StyledButton";
 
@@ -56,12 +56,12 @@ const ProjectText: FC<Props> = ({
       <CardActions>
         <StyledButton
           href={live}
-          LinkComponent={ButtonLink}>
+          LinkComponent={ForwardButtonLink}>
           See Live
         </StyledButton>
         <StyledButton
           href={github}
-          LinkComponent={ButtonLink}>
+          LinkComponent={ForwardButtonLink}>
           Source Code
         </StyledButton>
       </CardActions>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useStatus = (component: string) => {
+const useComponentStatus = (component: string) => {
   useEffect(() => {
     console.log(`${component} Mounted`);
     return () => {
@@ -9,4 +9,4 @@ const useStatus = (component: string) => {
   }, [component]);
 };
 
-export default useStatus;
+export default useComponentStatus;

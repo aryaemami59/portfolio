@@ -1,3 +1,8 @@
 vite.config.ts
+build
+.git
+public
+netlify.toml
+tsconfig.json
 node_modules
 .vscode

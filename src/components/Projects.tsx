@@ -7,7 +7,7 @@ const Projects: FC = () => (
   <>
     {projects.map(project => (
       <div
-        className="row my-5"
+        className="row my-5 align-items-center"
         key={project.id}>
         <ProjectWrapper {...project} />
       </div>

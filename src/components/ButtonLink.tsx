@@ -1,10 +1,13 @@
 import { Link } from "@mui/material";
-import type { ForwardRefRenderFunction, ReactNode } from "react";
-import { forwardRef, memo } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ForwardRefRenderFunction,
+  ReactNode,
+} from "react";
 
-type Props = {
-  href: string;
-  children: ReactNode;
+type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href?: string;
+  children?: ReactNode;
 };
 
 const ButtonLink: ForwardRefRenderFunction<HTMLAnchorElement, Props> = (
@@ -14,16 +17,17 @@ const ButtonLink: ForwardRefRenderFunction<HTMLAnchorElement, Props> = (
   const { children } = props;
   return (
     <Link
-      {...props}
       target="_blank"
       rel="noreferrer"
       ref={ref}
-      underline="none">
+      underline="none"
+      {...props}>
       {children}
     </Link>
   );
 };
 
-const forwardButtonLink = forwardRef(ButtonLink);
+// const forwardButtonLink = forwardRef(ButtonLink);
 
-export default memo<Props>(forwardButtonLink);
+export default ButtonLink;
+// export default memo<Props>(forwardButtonLink);

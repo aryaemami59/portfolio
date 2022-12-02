@@ -1,11 +1,9 @@
 import { Card, CardMedia } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
+import type { ProjectImageProps } from "../types/projects";
 
-type Props = {
-  name: string;
-  screenshot: string;
-};
+type Props = ProjectImageProps;
 
 const ProjectImage: FC<Props> = ({ name, screenshot }) => {
   const image = `/assets/screenshots/${screenshot}`;

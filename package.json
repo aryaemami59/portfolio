@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "npm run dev",
-    "lint": "eslint --ext .tsx,.ts,.js .",
-    "format": "eslint --fix --ext .tsx,.ts,.js .",
+    "lint": "eslint --ext .{j,t}s{,x}",
+    "format": "eslint --fix --ext .{j,t}s{,x} .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -19,8 +19,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/lab": "^5.0.0-alpha.107",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "^5.10.15",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
@@ -32,6 +32,7 @@
     "react-awesome-reveal": "^4.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
+    "react-scroll": "^1.8.8",
     "react-scroll-parallax": "^3.3.1",
     "react-transition-group": "^4.4.5",
     "sort-by": "^1.2.0"
@@ -39,12 +40,13 @@
   "devDependencies": {
     "@types/aos": "^3.0.4",
     "@types/node": "^18.11.9",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-scroll": "^1.8.5",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "^8.27.0",
+    "eslint": "^8.28.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -53,11 +55,11 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-perf": "^3.3.1",
     "eslint-plugin-react-redux": "^4.0.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.2.3"
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
   }
 }

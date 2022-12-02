@@ -1,10 +1,9 @@
 import { Chip, Stack } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
+import type { ProjectTextSubHeaderProps } from "../types/projects";
 
-type Props = {
-  techStack: string[];
-};
+type Props = ProjectTextSubHeaderProps;
 
 const ProjectTextSubHeader: FC<Props> = ({ techStack }) => (
   <Stack
