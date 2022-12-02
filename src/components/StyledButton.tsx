@@ -7,7 +7,6 @@ import { Button } from "@mui/material";
 import type { LinkProps } from "@mui/material/Link";
 // import type { OverrideProps } from "@mui/material/OverridableComponent";
 import "aos/dist/aos.css";
-import console from "console";
 import type { AnchorHTMLAttributes, ElementType, FC } from "react";
 import { memo } from "react";
 
@@ -24,9 +23,9 @@ const StyledButton: FC<Props> = props => {
   const { children } = props;
   return (
     <Button
+      {...props}
       size="large"
-      className="button-slide"
-      {...props}>
+      className={`button-slide ${props.className}`}>
       {children}
     </Button>
   );

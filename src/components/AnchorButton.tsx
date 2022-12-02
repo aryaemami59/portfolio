@@ -7,10 +7,11 @@ type Props = Omit<LinkProps, "ref">;
 
 const AnchorButton: FC<Props> = props => (
   <Link
-    smooth
-    spy
-    activeClass="active"
     {...props}
+    // smooth
+    spy
+    // duration={300}
+    activeClass="active"
   />
 );
 

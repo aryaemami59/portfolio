@@ -3,7 +3,9 @@ import type { FC } from "react";
 import { memo } from "react";
 import type { FadeProps, SlideProps } from "react-awesome-reveal";
 import "./App.css";
+import About from "./components/About";
 import AnchorButton from "./components/AnchorButton";
+import Contact from "./components/Contact";
 import CustomReveal from "./components/CustomReveal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -21,7 +23,7 @@ const App: FC = () => (
   <div className="App">
     <Header />
     <div id="container">
-      <section>
+      <section id="top">
         <Container maxWidth="sm">
           <CustomReveal>
             <h1 className="text-center">
@@ -59,19 +61,29 @@ const App: FC = () => (
           <CustomReveal
             slideProps={projectsSlideProps}
             fadeProps={projectsFadeProps}>
-            <h1 className="text-center">RESUME</h1>
+            <h1 className="text-center my-5">RESUME</h1>
           </CustomReveal>
           <Resume />
         </Container>
       </section>
       <section id="contact">
         <Container>
-          <CustomReveal />
+          <CustomReveal
+            slideProps={projectsSlideProps}
+            fadeProps={projectsFadeProps}>
+            <h1 className="text-center my-5">CONTACT</h1>
+          </CustomReveal>
+          <Contact />
         </Container>
       </section>
       <section id="about">
         <Container>
-          <CustomReveal />
+          <CustomReveal
+            slideProps={projectsSlideProps}
+            fadeProps={projectsFadeProps}>
+            <h1 className="text-center my-5">ABOUT</h1>
+          </CustomReveal>
+          <About />
         </Container>
       </section>
     </div>
