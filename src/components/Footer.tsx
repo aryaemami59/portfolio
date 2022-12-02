@@ -8,41 +8,41 @@ import AnchorButton from "./AnchorButton";
 import BottomAppBar from "./BottomAppBar";
 import SocialLink from "./header_links/SocialLink";
 
-const anchor = { internal: true };
+const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 const Footer: FC = () => (
-  <footer>
-    <BottomAppBar color="transparent">
-      <AnchorButton
-        anchor={anchor}
-        to="top"
-        className="mt-3 align-self-center">
-        <IconButton
-          size="large"
-          className="align-self-center button-slide">
-          <KeyboardArrowUpOutlinedIcon />
-        </IconButton>
-      </AnchorButton>
-      <Toolbar>
-        <Grid
-          container
-          justifyContent="center"
-          columnSpacing={5}>
-          {links.map((link: Links) => (
-            <Grid
+  <BottomAppBar
+    color="transparent"
+    component="footer">
+    <AnchorButton
+      to="top"
+      className="mt-3 align-self-center">
+      <IconButton
+        onClick={scrollTop}
+        size="large"
+        className="align-self-center button-slide">
+        <KeyboardArrowUpOutlinedIcon />
+      </IconButton>
+    </AnchorButton>
+    <Toolbar>
+      <Grid
+        container
+        justifyContent="center"
+        columnSpacing={5}>
+        {links.map((link: Links) => (
+          <Grid
+            key={link.id}
+            item>
+            <SocialLink
+              href={link.href}
+              icon={link.icon}
               key={link.id}
-              item>
-              <SocialLink
-                href={link.href}
-                icon={link.icon}
-                key={link.id}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Toolbar>
-    </BottomAppBar>
-  </footer>
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Toolbar>
+  </BottomAppBar>
 );
 
 export default memo(Footer);

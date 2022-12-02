@@ -1,13 +1,13 @@
 import type { AppBarProps, SxProps, Theme } from "@mui/material";
 import { AppBar } from "@mui/material";
-import type { FC } from "react";
+import type { ElementType } from "react";
 import { memo } from "react";
 
 const sx: SxProps<Theme> = { top: "auto", bottom: 0 };
 
-type Props = AppBarProps;
-
-const BottomAppBar: FC<Props> = props => (
+const BottomAppBar = <C extends ElementType>(
+  props: AppBarProps<C, { component?: C }>
+) => (
   <AppBar
     sx={sx}
     position="static"
@@ -16,4 +16,4 @@ const BottomAppBar: FC<Props> = props => (
   />
 );
 
-export default memo<Props>(BottomAppBar);
+export default memo(BottomAppBar);
