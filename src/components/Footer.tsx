@@ -1,18 +1,18 @@
-import { Grid, Toolbar } from "@mui/material";
+import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
+import { Grid, IconButton, Toolbar } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
 import links from "../data/links.json";
 import type { Links } from "../types/links";
+import AnchorButton from "./AnchorButton";
 import BottomAppBar from "./BottomAppBar";
 import SocialLink from "./header_links/SocialLink";
-import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
-import { IconButton } from "@mui/material";
-import AnchorButton from "./AnchorButton";
 
 const Footer: FC = () => (
   <footer>
     <BottomAppBar color="transparent">
       <AnchorButton
+        anchor={{ internal: true }}
         to="top"
         className="mt-3 align-self-center">
         <IconButton

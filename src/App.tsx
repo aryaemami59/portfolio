@@ -2,6 +2,7 @@ import { ButtonGroup, Container } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
 import type { FadeProps, SlideProps } from "react-awesome-reveal";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import AnchorButton from "./components/AnchorButton";
@@ -23,59 +24,77 @@ const App: FC = () => (
   <div className="App">
     <Header />
     <div id="container">
-      <section id="top">
-        <Container maxWidth="sm">
-          <CustomReveal>
-            <h1 className="text-center">
-              <span className="text-main-color">Arya Emami</span>
-            </h1>
-            <h1 className="text-center">Full Stack Developer</h1>
-          </CustomReveal>
-          <CustomReveal
-            slideProps={buttonGroupSlideProps}
-            fadeProps={buttonGroupFadeProps}>
-            <ButtonGroup className=" w-100 justify-content-center my-5">
-              {anchors.map(anchor => (
-                <StyledButton key={anchor.id}>
-                  <AnchorButton to={anchor.title.toLowerCase()}>
-                    {anchor.title}
-                  </AnchorButton>
-                </StyledButton>
-              ))}
-            </ButtonGroup>
-          </CustomReveal>
-        </Container>
-      </section>
-      <section id="projects">
-        <Container>
-          <CustomReveal
-            slideProps={projectsSlideProps}
-            fadeProps={projectsFadeProps}>
-            <h1 className="text-center">PROJECTS</h1>
-          </CustomReveal>
-          <Projects />
-        </Container>
-      </section>
-      <section id="resume">
-        <Container>
-          <CustomReveal
-            slideProps={projectsSlideProps}
-            fadeProps={projectsFadeProps}>
-            <h1 className="text-center my-5">RESUME</h1>
-          </CustomReveal>
-          <Resume />
-        </Container>
-      </section>
-      <section id="contact">
-        <Container>
-          <CustomReveal
-            slideProps={projectsSlideProps}
-            fadeProps={projectsFadeProps}>
-            <h1 className="text-center my-5">CONTACT</h1>
-          </CustomReveal>
-          <Contact />
-        </Container>
-      </section>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="top">
+                  <Container maxWidth="sm">
+                    <CustomReveal>
+                      <h1 className="text-center">
+                        <span className="text-main-color">Arya Emami</span>
+                      </h1>
+                      <h1 className="text-center">Full Stack Developer</h1>
+                    </CustomReveal>
+                    <CustomReveal
+                      slideProps={buttonGroupSlideProps}
+                      fadeProps={buttonGroupFadeProps}>
+                      <ButtonGroup className=" w-100 justify-content-center my-5">
+                        {anchors.map(anchor => (
+                          <StyledButton key={anchor.id}>
+                            <AnchorButton
+                              anchor={anchor}
+                              to={anchor.title.toLowerCase()}>
+                              {anchor.title}
+                            </AnchorButton>
+                          </StyledButton>
+                        ))}
+                      </ButtonGroup>
+                    </CustomReveal>
+                  </Container>
+                </section>
+                <section id="projects">
+                  <Container>
+                    <CustomReveal
+                      slideProps={projectsSlideProps}
+                      fadeProps={projectsFadeProps}>
+                      <h1 className="text-center">PROJECTS</h1>
+                    </CustomReveal>
+                    <Projects />
+                  </Container>
+                </section>
+                <section id="resume">
+                  <Container>
+                    <CustomReveal
+                      slideProps={projectsSlideProps}
+                      fadeProps={projectsFadeProps}>
+                      <h1 className="text-center my-5">RESUME</h1>
+                    </CustomReveal>
+                    <Resume />
+                  </Container>
+                </section>
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <section id="contact">
+                <Container>
+                  <CustomReveal
+                    slideProps={projectsSlideProps}
+                    fadeProps={projectsFadeProps}>
+                    <h1 className="text-center my-5">CONTACT</h1>
+                  </CustomReveal>
+                  <Contact />
+                </Container>
+              </section>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
       <section id="about">
         <Container>
           <CustomReveal

@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "npm run dev",
-    "lint": "eslint --ext .{j,t}s{,x}",
-    "format": "eslint --fix --ext .{j,t}s{,x} .",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "format": "eslint . --fix --ext .js,.ts,.tsx ",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -54,6 +54,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prefer-arrow-functions": "^3.1.4",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-perf": "^3.3.1",
