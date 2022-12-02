@@ -8,11 +8,13 @@ import AnchorButton from "./AnchorButton";
 import BottomAppBar from "./BottomAppBar";
 import SocialLink from "./header_links/SocialLink";
 
+const anchor = { internal: true };
+
 const Footer: FC = () => (
   <footer>
     <BottomAppBar color="transparent">
       <AnchorButton
-        anchor={{ internal: true }}
+        anchor={anchor}
         to="top"
         className="mt-3 align-self-center">
         <IconButton
