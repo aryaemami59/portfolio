@@ -1,36 +1,56 @@
-import { TextField } from "@mui/material";
+import { FormControl, FormGroup } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
+import InputField from "./InputField";
 import StyledButton from "./StyledButton";
 
-const Contact: FC = () => (
-  <form
-    name="contact"
-    action=""
-    className="d-flex flex-column"
-    method="POST">
-    <div className="row mb-3">
-      <TextField
-        label="Name"
-        required
-      />
-    </div>
-    <div className="row mb-3">
-      <TextField
-        label="Email"
-        required
-      />
-    </div>
-    <div className="row mb-3">
-      <TextField
-        rows={6}
-        label="Message"
-        required
-        multiline
-      />
-    </div>
-    <StyledButton className="align-self-center">Send</StyledButton>
-  </form>
-);
+const Contact: FC = () => {
+  // const [error, setError] = useState(false)
+
+  // const handleSubmit = useCallback(() => {
+
+  // }, [])
+
+  return (
+    <form
+      name="contact"
+      action="https://formsubmit.co/aryaemami59@yahoo.com"
+      className="d-flex flex-column"
+      method="POST">
+      <FormControl margin="normal">
+        {/* <FormGroup row> */}
+        <InputField
+          // fullWidth
+          // margin="normal"
+          label="Name"
+          type="text"
+          name="name"
+        />
+        {/* </FormGroup> */}
+      </FormControl>
+      <FormControl margin="normal">
+        <InputField
+          type="email"
+          name="email"
+          label="Email"
+        />
+      </FormControl>
+      <FormControl margin="normal">
+        <InputField
+          rows={6}
+          type="text"
+          name="message"
+          label="Message"
+          multiline
+        />
+      </FormControl>
+      <StyledButton
+        type="submit"
+        className="align-self-center">
+        Send
+      </StyledButton>
+    </form>
+  );
+};
 
 export default memo(Contact);

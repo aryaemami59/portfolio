@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import type { ElementType } from "react";
 import { memo } from "react";
 
-const StyledButton = <C extends ElementType>(
+const StyledButton = <C extends ElementType = "button">(
   props: ButtonProps<C, { component?: C }>
 ) => {
   const { children, className } = props;
@@ -17,4 +17,4 @@ const StyledButton = <C extends ElementType>(
   );
 };
 
-export default memo(StyledButton);
+export default memo(StyledButton) as typeof StyledButton;

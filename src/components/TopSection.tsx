@@ -2,7 +2,7 @@ import { ButtonGroup, Container } from "@mui/material";
 import type { FC } from "react";
 import { memo } from "react";
 import type { FadeProps, SlideProps } from "react-awesome-reveal";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import anchors from "../data/anchors.json";
 import AnchorButton from "./AnchorButton";
 import CustomReveal from "./CustomReveal";
@@ -32,13 +32,19 @@ const TopSection: FC = () => (
                 </AnchorButton>
               </StyledButton>
             ) : (
-              <StyledButton
-                component="a"
-                LinkComponent={Link}
+              <NavLink
                 key={anchor.id}
-                href={anchor.title.toLowerCase()}>
-                {anchor.title}
-              </StyledButton>
+                to={anchor.title.toLowerCase()}>
+                {({ isActive, isPending }) =>
+                  isActive ? (
+                    <StyledButton className="active-button">
+                      {anchor.title}
+                    </StyledButton>
+                  ) : (
+                    <StyledButton>{anchor.title}</StyledButton>
+                  )
+                }
+              </NavLink>
             )
           )}
         </ButtonGroup>

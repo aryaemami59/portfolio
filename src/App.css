@@ -30,6 +30,28 @@ a.custom-link {
   color: inherit;
 }
 
+button.active-button {
+  color: white !important;
+  box-shadow: inset 400px 0 0 0 var(--main-color);
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+/* button.active-button:hover {
+  color: var(--main-color) !important;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0 var(--main-color);
+  border: solid 2px var(--main-color) !important;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+} */
+
+.not-active {
+  color: var(--main-color) !important;
+}
+
 img.custom-image {
   /* object-fit: fill; */
   /* height: 700px; */

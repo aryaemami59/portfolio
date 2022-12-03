@@ -5,7 +5,7 @@ import { memo } from "react";
 
 const sx: SxProps<Theme> = { top: "auto", bottom: 0 };
 
-const BottomAppBar = <C extends ElementType>(
+const BottomAppBar = <C extends ElementType = "header">(
   props: AppBarProps<C, { component?: C }>
 ) => (
   <AppBar
@@ -16,4 +16,4 @@ const BottomAppBar = <C extends ElementType>(
   />
 );
 
-export default memo(BottomAppBar);
+export default memo(BottomAppBar) as typeof BottomAppBar;
