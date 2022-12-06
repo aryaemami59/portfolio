@@ -1,8 +1,7 @@
-import type { OutlinedTextFieldProps, TextFieldProps } from "@mui/material";
+import type { TextFieldProps } from "@mui/material";
 import { TextField } from "@mui/material";
 import type { ChangeEvent, FC } from "react";
 import { memo, useCallback, useState } from "react";
-import { useFormControl } from "@mui/material/FormControl";
 
 type Props = TextFieldProps;
 
@@ -12,8 +11,6 @@ const InputField: FC<Props> = props => {
   const changeHandler = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setVal(e.target.value);
   }, []);
-
-  console.log(useFormControl());
 
   return (
     <TextField

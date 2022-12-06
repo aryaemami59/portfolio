@@ -5,7 +5,7 @@ import { memo } from "react";
 const About: FC = () => (
   <Card raised>
     <CardContent>
-      <Typography variant="h5">
+      <Typography variant="h4">
         A fullstack developer with an emphasis in frontend technology. I use
         tools and technologies such as TypeScript, React, Python, React Native,
         SQL and Node to develop a variety of products. I have a passion for

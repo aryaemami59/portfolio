@@ -1,0 +1,5 @@
+[
+  { "id": 0, "title": "Home", "internal": false, "link": "/" },
+  { "id": 2, "title": "Contact", "internal": false, "link": "contact" },
+  { "id": 3, "title": "About", "internal": false, "link": "about" }
+]

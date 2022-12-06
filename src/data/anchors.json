@@ -1,6 +1,6 @@
 [
-  { "id": 0, "title": "Projects", "internal": true },
-  { "id": 1, "title": "Resume", "internal": true },
-  { "id": 2, "title": "Contact", "internal": false },
-  { "id": 3, "title": "About", "internal": false }
+  { "id": 0, "title": "Projects", "internal": true, "link": "projects" },
+  { "id": 1, "title": "Resume", "internal": true, "link": "resume" },
+  { "id": 2, "title": "Contact", "internal": false, "link": "contact" },
+  { "id": 3, "title": "About", "internal": false, "link": "about" }
 ]
