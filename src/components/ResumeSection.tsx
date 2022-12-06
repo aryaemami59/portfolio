@@ -16,7 +16,9 @@ const ResumeSection: FC = () => (
         fadeProps={projectsFadeProps}>
         <h1 className="text-center my-5">RESUME</h1>
       </CustomReveal>
-      <Resume />
+      <CustomReveal>
+        <Resume />
+      </CustomReveal>
     </Container>
   </section>
 );
