@@ -1,5 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import React from "react";
 import { createRoot } from "react-dom/client";

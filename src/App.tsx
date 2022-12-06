@@ -28,7 +28,7 @@ const App: FC = () => (
   <div className="App">
     <Header />
     <div id="container">
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio/">
         <TopSection />
         <Routes>
           <Route path="/">
