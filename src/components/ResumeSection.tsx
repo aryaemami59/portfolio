@@ -9,7 +9,9 @@ const projectsSlideProps: SlideProps = { direction: "down" };
 const projectsFadeProps: FadeProps = { delay: 100 };
 
 const ResumeSection: FC = () => (
-  <section id="resume">
+  <section
+    id="resume"
+    className="my-5">
     <Container>
       <CustomReveal
         slideProps={projectsSlideProps}

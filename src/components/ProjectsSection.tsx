@@ -9,12 +9,14 @@ const projectsSlideProps: SlideProps = { direction: "down" };
 const projectsFadeProps: FadeProps = { delay: 100 };
 
 const ProjectsSection: FC = () => (
-  <section id="projects">
+  <section
+    id="projects"
+    className="my-5">
     <Container>
       <CustomReveal
         slideProps={projectsSlideProps}
         fadeProps={projectsFadeProps}>
-        <h1 className="text-center">PROJECTS</h1>
+        <h1 className="text-center my-5">PROJECTS</h1>
       </CustomReveal>
       <Projects />
     </Container>

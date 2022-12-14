@@ -5,8 +5,8 @@ import links from "../data/links.json";
 import StyledButton from "./StyledButton";
 
 const { href } = links[3];
-const downloadLink = "/assets/images/AryaEmamiResume.pdf";
-const image = `/assets/screenshots/resume.png`;
+const downloadLink = "assets/images/AryaEmamiResume.pdf";
+const image = `assets/screenshots/resume.png`;
 
 const Resume: FC = () => (
   <Card raised>

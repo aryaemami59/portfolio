@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://aryaemami59.github.io/portfolio",
@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx",
     "format": "eslint . --fix --ext .js,.ts,.tsx ",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3000"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
