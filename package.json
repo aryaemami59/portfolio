@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "start": "npm run dev",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "format": "eslint . --fix --ext .js,.ts,.tsx ",
+    "format": "eslint . --fix --ext .js,.ts,.tsx",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview --port 3000"
   },

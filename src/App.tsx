@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { memo } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
@@ -28,7 +28,7 @@ const App: FC = () => (
   <div className="App">
     <Header />
     <div id="container">
-      <BrowserRouter basename="/portfolio/">
+      <HashRouter>
         <TopSection />
         <Routes>
           <Route path="/">
@@ -50,7 +50,7 @@ const App: FC = () => (
             />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
     <Footer />
   </div>

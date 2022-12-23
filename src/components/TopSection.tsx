@@ -27,24 +27,11 @@ const TopSection: FC = () => {
         <CustomReveal
           slideProps={buttonGroupSlideProps}
           fadeProps={buttonGroupFadeProps}>
-          <ButtonGroup className="w-100 justify-content-center my-5">
-            {location.pathname !== "/"
-              ? alternateAnchors.map((anchor: Anchors) => (
-                  <NavLink
-                    key={anchor.id}
-                    to={anchor.link}>
-                    {({ isActive, isPending }) =>
-                      isActive ? (
-                        <StyledButton className="active-button">
-                          {anchor.title}
-                        </StyledButton>
-                      ) : (
-                        <StyledButton>{anchor.title}</StyledButton>
-                      )
-                    }
-                  </NavLink>
-                ))
-              : anchors.map((anchor: Anchors) =>
+          <ButtonGroup
+            fullWidth
+            className="flex-md-row flex-column justify-content-center my-5">
+            {location.pathname === "/"
+              ? anchors.map((anchor: Anchors) =>
                   anchor.internal ? (
                     <StyledButton key={anchor.id}>
                       <AnchorButton to={anchor.link}>
@@ -66,7 +53,22 @@ const TopSection: FC = () => {
                       }
                     </NavLink>
                   )
-                )}
+                )
+              : alternateAnchors.map((anchor: Anchors) => (
+                  <NavLink
+                    key={anchor.id}
+                    to={anchor.link}>
+                    {({ isActive, isPending }) =>
+                      isActive ? (
+                        <StyledButton className="active-button">
+                          {anchor.title}
+                        </StyledButton>
+                      ) : (
+                        <StyledButton>{anchor.title}</StyledButton>
+                      )
+                    }
+                  </NavLink>
+                ))}
           </ButtonGroup>
         </CustomReveal>
       </Container>
