@@ -21,7 +21,7 @@
     "id": 1,
     "name": "Simply RX Supplies Mobile App",
     "github": "https://github.com/aryaemami59/simply-rx-supplies-mobile-app",
-    "live": "",
+    "live": "https://snack.expo.dev/@aryaemami59/github.com-aryaemami59-simply-rx-supplies-mobile-app@snack?platform=ios",
     "description": "Simply RX Supplies is a mobile app that serves as a tool to help make ordering pharmacy supplies easier.",
     "screenshot": "assets/screenshots/simplyrxsupplies-mobile-app.png",
     "techStack": [
